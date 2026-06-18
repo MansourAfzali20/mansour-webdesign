@@ -48,41 +48,41 @@ if (contactForm) {
             typeWebsite === "" ||
             bericht === ""
         ) {
-            contactMessage.textContent = "Vul alle velden in.";
+            contactMessage.textContent = "Please fill in all fields.";
             contactMessage.className = "contact-message error-message";
             return;
         }
 
         if (!isValidEmail(email)) {
-            contactMessage.textContent = "Vul een geldig e-mailadres in.";
+            contactMessage.textContent = "Please enter a valid email address.";
             contactMessage.className = "contact-message error-message";
             return;
         }
 
         if (!isValidBelgianPhoneNumber(telefoon)) {
-            contactMessage.textContent = "Vul een geldig Belgisch GSM-nummer in, bijvoorbeeld 0486 21 50 01 of +32 486 21 50 01.";
+            contactMessage.textContent = "Please enter a valid Belgian mobile number, for example 0486 21 50 01 or +32 486 21 50 01.";
             contactMessage.className = "contact-message error-message";
             return;
         }
 
         const whatsappMessage = `
-Nieuwe offerteaanvraag
+New quote request
 
-Naam: ${naam}
-Bedrijf: ${bedrijf}
+Name: ${naam}
+Business: ${bedrijf}
 E-mail: ${email}
-Telefoon: ${telefoon}
-Pakket: ${typeWebsite}
+Phone: ${telefoon}
+Package: ${typeWebsite}
 
-Bericht:
+Message:
 ${bericht}
         `;
 
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
         contactMessage.innerHTML = `
-            <strong>Bedankt ${naam}!</strong><br>
-            WhatsApp wordt geopend met je offerteaanvraag.
+            <strong>Thank you ${naam}!</strong><br>
+            WhatsApp is opening with your quote request.
         `;
 
         contactMessage.className = "contact-message success-message";

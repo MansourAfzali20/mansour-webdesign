@@ -60,7 +60,7 @@
     margin-bottom: 10px;
 }
 
-/* PRIJZEN */
+/* PRICING */
 
 #prijzen .card {
     border-top: 5px solid #38bdf8;
@@ -143,7 +143,7 @@
     box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
 }
 
-/* WAAROM KIEZEN VOOR MIJ */
+/* WHY CHOOSE ME */
 
 .why-section {
     padding-top: 90px;
@@ -285,7 +285,7 @@
     border: 1px solid #fca5a5;
 }
 
-/* POPULAIR PAKKET */
+/* POPULAR PACKAGE */
 
 .popular-card {
     position: relative;
